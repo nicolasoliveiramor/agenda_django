@@ -1,0 +1,5 @@
+{% block content %} {% for evento in eventos %}
+<ul>
+  <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+</ul>
+{% endfor %} {% endblock %}
