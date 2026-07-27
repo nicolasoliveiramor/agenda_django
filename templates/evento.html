@@ -1,0 +1,32 @@
+{% include 'model-header.html' %} {% block content %}
+<h2>Evento</h2>
+
+<form action="submit" method="POST">{% csrf_token %}
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+    "
+  >
+    <label for="titulo">Titulo:</label>
+    <input type="text" name="titulo" id="titulo" required style="width: 15rem" />
+    <label for="data_evento">Data:</label>
+    <input
+      type="datetime-local"
+      name="data_evento"
+      id="data_evento"
+      required
+      style="width: 15rem"
+    />
+    <label for="descricao">Descricao:</label>
+    <textarea name="descricao" id="descricao" rows="5" style="width: 15rem"></textarea>
+  </div>
+  <button type="submit">Salvar</button>
+  <a href="/">
+    <button type="button">Voltar</button>
+  </a>
+</form>
+
+{% endblock %} {% include 'model-footer.html' %}
