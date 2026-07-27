@@ -1,6 +1,6 @@
 {% block content %} {% for evento in eventos %}
 <ul>
-  <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+  <li>{{ evento.titulo }} - {{ evento.get_data_evento }} {% if evento.local %} - {{ evento.local }} {% endif %}</li>
 </ul>
 {% endfor %}
 <a href="evento/">
